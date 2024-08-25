@@ -50,9 +50,9 @@ Visualization: The clusters and Convex Hull boundaries are plotted on a basemap 
 
 ## Loading the datasets
 
-`shops = pd.read_csv('dataset.csv')
+`shops = pd.read_csv('dataset.csv')`
 
-warehouses = pd.read_csv('territories_centroids.csv')`
+`warehouses = pd.read_csv('territories_centroids.csv')`
 
 ## Prepare data for clustering
 
@@ -60,25 +60,28 @@ warehouses = pd.read_csv('territories_centroids.csv')`
 
 ## Using K-Means clustering
 
-`kmeans = KMeans(n_clusters=len(warehouses), init=warehouses[['warehouse_latitude', 'warehouse_longitude']].values, n_init=1)
+`kmeans = KMeans(n_clusters=len(warehouses), init=warehouses[['warehouse_latitude', 'warehouse_longitude']].values, n_init=1)`
 
- shops['cluster'] = kmeans.fit_predict(shop_locations)`
+`shops['cluster'] = kmeans.fit_predict(shop_locations)`
 
 ## Convert to GeoDataFrames
 
-`shops_gdf = gpd.GeoDataFrame(shops, geometry=gpd.points_from_xy(shops['duka_longitude'], shops['duka_latitude']), crs='EPSG:4326')
+`shops_gdf = gpd.GeoDataFrame(shops, geometry=gpd.points_from_xy(shops['duka_longitude'], shops['duka_latitude']), crs='EPSG:4326')`
 
- warehouses_gdf = gpd.GeoDataFrame(warehouses, geometry=gpd.points_from_xy(warehouses['warehouse_longitude'], warehouses['warehouse_latitude']), crs='EPSG:4326')`
+`warehouses_gdf = gpd.GeoDataFrame(warehouses, geometry=gpd.points_from_xy(warehouses['warehouse_longitude'], warehouses['warehouse_latitude']), crs='EPSG:4326')`
 
 ## Reproject for basemap
 
-`shops_gdf = shops_gdf.to_crs(epsg=3857)
+`shops_gdf = shops_gdf.to_crs(epsg=3857)`
 
- warehouses_gdf = warehouses_gdf.to_crs(epsg=3857)`
+`warehouses_gdf = warehouses_gdf.to_crs(epsg=3857)`
 
 ## Running the Project
 
 1. Clone the repository
+   `git clone https://github.com/Habiba-Hussein/Dynamic-Routing.git`
+   `cd your-repo-name`
+
 2. Install the required dependencies
 3. Run the Python script
 
