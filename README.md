@@ -3,7 +3,7 @@ This project demonstrates how to cluster shop locations using K-Means clustering
 
 ## Table of Contents
 
-[Introduction](#introduction)
+[Project Overview](#project-overview)
 
 [Data](#data)
 
@@ -17,7 +17,7 @@ This project demonstrates how to cluster shop locations using K-Means clustering
 
 [Future Improvements](future-improvements)
 
-### Introduction
+### Project Overview
 
 This project focuses on analyzing the geographic distribution of shops and warehouses. By clustering the shops based on their locations and visualizing these clusters with Convex Hull boundaries, we can gain insights into the spatial distribution and proximity of shops to warehouses.
 
